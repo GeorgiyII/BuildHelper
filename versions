@@ -1,0 +1,5 @@
+--versions--
+python 3.5.2
+pyqt 5.9.2
+sqlite 3
+SIP 4.19.6
