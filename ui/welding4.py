@@ -115,7 +115,7 @@ class Ui_weldingTable1(object):
         self.result2.setAlignment(QtCore.Qt.AlignCenter)
         self.result2.setObjectName("result2")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(340, 390, 111, 61))
+        self.label_2.setGeometry(QtCore.QRect(340, 390, 115, 61))
         font = QtGui.QFont()
         font.setPointSize(18)
         self.label_2.setFont(font)
@@ -175,4 +175,16 @@ class Ui_weldingTable1(object):
 
                                    QPushButton:pressed { background-color: rgb(191, 241, 255); }
                                """)
+        self.table1img.setStyleSheet("""
+                                                    QPushButton:hover { background-color: white }
+                                                    QPushButton:!hover { background-color: white }
+
+                                                    QPushButton:pressed { background-color: white; }
+                                                """)
+        self.table1img2.setStyleSheet("""
+                                                    QPushButton:hover { background-color: white }
+                                                    QPushButton:!hover { background-color: white }
+
+                                                    QPushButton:pressed { background-color: white; }
+                                                """)
 

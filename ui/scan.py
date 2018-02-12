@@ -34,9 +34,9 @@ class Ui_scan(object):
         self.img3.setIconSize(QtCore.QSize(130, 130))
         self.img3.setObjectName("img3")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(160, 6, 221, 20))
+        self.label.setGeometry(QtCore.QRect(150, 6, 240, 20))
         font = QtGui.QFont()
-        font.setPointSize(18)
+        font.setPointSize(15)
         self.label.setFont(font)
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
@@ -48,16 +48,16 @@ class Ui_scan(object):
         self.d_cylinder.setGeometry(QtCore.QRect(190, 35, 60, 20))
         self.d_cylinder.setObjectName("d_cylinder")
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(180, 150, 151, 20))
+        self.label_5.setGeometry(QtCore.QRect(170, 152, 180, 20))
         font = QtGui.QFont()
-        font.setPointSize(18)
+        font.setPointSize(15)
         self.label_5.setFont(font)
         self.label_5.setAlignment(QtCore.Qt.AlignCenter)
         self.label_5.setObjectName("label_5")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(160, 295, 181, 21))
+        self.label_6.setGeometry(QtCore.QRect(150, 297, 210, 20))
         font = QtGui.QFont()
-        font.setPointSize(18)
+        font.setPointSize(15)
         self.label_6.setFont(font)
         self.label_6.setAlignment(QtCore.Qt.AlignCenter)
         self.label_6.setObjectName("label_6")
@@ -76,7 +76,7 @@ class Ui_scan(object):
         self.h_cylinder.setGeometry(QtCore.QRect(190, 95, 61, 21))
         self.h_cylinder.setObjectName("h_cylinder")
         self.pushCylinder = QtWidgets.QPushButton(self.centralwidget)
-        self.pushCylinder.setGeometry(QtCore.QRect(150, 120, 131, 32))
+        self.pushCylinder.setGeometry(QtCore.QRect(155, 120, 130, 30))
         self.pushCylinder.setObjectName("pushCylinder")
         self.label_9 = QtWidgets.QLabel(self.centralwidget)
         self.label_9.setGeometry(QtCore.QRect(255, 35, 21, 16))
@@ -105,7 +105,7 @@ class Ui_scan(object):
         self.label_13.setAlignment(QtCore.Qt.AlignCenter)
         self.label_13.setObjectName("label_13")
         self.pushPipe90 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushPipe90.setGeometry(QtCore.QRect(150, 265, 131, 32))
+        self.pushPipe90.setGeometry(QtCore.QRect(155, 265, 130, 30))
         self.pushPipe90.setObjectName("pushPipe90")
         self.label_14 = QtWidgets.QLabel(self.centralwidget)
         self.label_14.setGeometry(QtCore.QRect(255, 210, 21, 16))
@@ -154,7 +154,7 @@ class Ui_scan(object):
         self.t_pipe.setGeometry(QtCore.QRect(190, 350, 60, 20))
         self.t_pipe.setObjectName("t_pipe")
         self.pushPipe = QtWidgets.QPushButton(self.centralwidget)
-        self.pushPipe.setGeometry(QtCore.QRect(150, 440, 131, 32))
+        self.pushPipe.setGeometry(QtCore.QRect(155, 440, 130, 30))
         self.pushPipe.setObjectName("pushPipe")
         self.label_21 = QtWidgets.QLabel(self.centralwidget)
         self.label_21.setGeometry(QtCore.QRect(255, 350, 21, 16))
@@ -194,7 +194,7 @@ class Ui_scan(object):
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(600, 10, 111, 20))
         font = QtGui.QFont()
-        font.setPointSize(18)
+        font.setPointSize(15)
         self.label_2.setFont(font)
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
@@ -257,6 +257,42 @@ class Ui_scan(object):
 
                                     QPushButton:pressed { background-color: rgb(191, 241, 255); }
                                 """)
+        self.img1.setStyleSheet("""
+                                            QPushButton:hover { background-color: white }
+                                            QPushButton:!hover { background-color: white }
+
+                                            QPushButton:pressed { background-color: white; }
+                                        """)
+        self.img1_1.setStyleSheet("""
+                                                    QPushButton:hover { background-color: white }
+                                                    QPushButton:!hover { background-color: white }
+
+                                                    QPushButton:pressed { background-color: white; }
+                                                """)
+        self.img2.setStyleSheet("""
+                                                    QPushButton:hover { background-color: white }
+                                                    QPushButton:!hover { background-color: white }
+
+                                                    QPushButton:pressed { background-color: white; }
+                                                """)
+        self.img2_2.setStyleSheet("""
+                                                    QPushButton:hover { background-color: white }
+                                                    QPushButton:!hover { background-color: white }
+
+                                                    QPushButton:pressed { background-color: white; }
+                                                """)
+        self.img3.setStyleSheet("""
+                                                    QPushButton:hover { background-color: white }
+                                                    QPushButton:!hover { background-color: white }
+
+                                                    QPushButton:pressed { background-color: white; }
+                                                """)
+        self.img2_3.setStyleSheet("""
+                                                    QPushButton:hover { background-color: white }
+                                                    QPushButton:!hover { background-color: white }
+
+                                                    QPushButton:pressed { background-color: white; }
+                                                """)
         self.d_cylinder.setValidator(QtGui.QDoubleValidator(0.0, 1000000.0, 3))
         self.t_cylinder.setValidator(QtGui.QDoubleValidator(0.0, 1000000.0, 3))
         self.h_cylinder.setValidator(QtGui.QDoubleValidator(0.0, 1000000.0, 3))

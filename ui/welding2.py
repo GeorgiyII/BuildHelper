@@ -16,7 +16,7 @@ class Ui_weldingFas2(object):
         self.centralwidget = QtWidgets.QWidget(weldingFas2)
         self.centralwidget.setObjectName("centralwidget")
         self.fas1img = QtWidgets.QPushButton(self.centralwidget)
-        self.fas1img.setGeometry(QtCore.QRect(50, 60, 200, 160))
+        self.fas1img.setGeometry(QtCore.QRect(50, 65, 200, 150))
         self.fas1img.setText("")
         self.fas1img.setIcon(QtGui.QIcon('image/fas2/fas1img.png'))
         self.fas1img.setIconSize(QtCore.QSize(170, 170))
@@ -24,19 +24,19 @@ class Ui_weldingFas2(object):
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(160, 20, 341, 21))
         font = QtGui.QFont()
-        font.setPointSize(18)
+        font.setPointSize(15)
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.fas2img = QtWidgets.QPushButton(self.centralwidget)
-        self.fas2img.setGeometry(QtCore.QRect(330, 60, 200, 160))
+        self.fas2img.setGeometry(QtCore.QRect(330, 65, 200, 150))
         self.fas2img.setText("")
         self.fas2img.setIcon(QtGui.QIcon('image/fas2/fas2img.png'))
         self.fas2img.setIconSize(QtCore.QSize(155, 155))
         self.fas2img.setObjectName("fas2img")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(80, 220, 411, 21))
+        self.label_6.setGeometry(QtCore.QRect(80, 220, 430, 21))
         font = QtGui.QFont()
-        font.setPointSize(18)
+        font.setPointSize(15)
         self.label_6.setFont(font)
         self.label_6.setObjectName("label_6")
         self.gridLayoutWidget_5 = QtWidgets.QWidget(self.centralwidget)
@@ -204,4 +204,16 @@ class Ui_weldingFas2(object):
 
                             QPushButton:pressed { background-color: rgb(191, 241, 255); }
                         """)
+        self.fas1img.setStyleSheet("""
+                                                    QPushButton:hover { background-color: white }
+                                                    QPushButton:!hover { background-color: white }
+
+                                                    QPushButton:pressed { background-color: white; }
+                                                """)
+        self.fas2img.setStyleSheet("""
+                                                    QPushButton:hover { background-color: white }
+                                                    QPushButton:!hover { background-color: white }
+
+                                                    QPushButton:pressed { background-color: white; }
+                                                """)
 

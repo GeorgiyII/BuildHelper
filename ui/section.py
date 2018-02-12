@@ -50,9 +50,9 @@ class Ui_section(object):
         self.tpol.setAlignment(QtCore.Qt.AlignCenter)
         self.tpol.setObjectName("tpol")
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(30, 260, 41, 41))
+        self.label_5.setGeometry(QtCore.QRect(30, 260, 50, 41))
         font = QtGui.QFont()
-        font.setPointSize(24)
+        font.setPointSize(20)
         self.label_5.setFont(font)
         self.label_5.setAlignment(QtCore.Qt.AlignCenter)
         self.label_5.setObjectName("label_5")
@@ -87,9 +87,9 @@ class Ui_section(object):
         self.label_7.setAlignment(QtCore.Qt.AlignCenter)
         self.label_7.setObjectName("label_7")
         self.label_8 = QtWidgets.QLabel(self.centralwidget)
-        self.label_8.setGeometry(QtCore.QRect(30, 320, 41, 41))
+        self.label_8.setGeometry(QtCore.QRect(30, 320, 50, 41))
         font = QtGui.QFont()
-        font.setPointSize(24)
+        font.setPointSize(20)
         self.label_8.setFont(font)
         self.label_8.setAlignment(QtCore.Qt.AlignCenter)
         self.label_8.setObjectName("label_8")
@@ -122,6 +122,12 @@ class Ui_section(object):
 
                             QPushButton:pressed { background-color: rgb(191, 241, 255); }
                         """)
+        self.weld_beadimg.setStyleSheet("""
+                                                    QPushButton:hover { background-color: white }
+                                                    QPushButton:!hover { background-color: white }
+
+                                                    QPushButton:pressed { background-color: white; }
+                                                """)
         self.tst.setValidator(QtGui.QDoubleValidator(0.0, 1000000.0, 3))
         self.hst.setValidator(QtGui.QDoubleValidator(0.0, 1000000.0, 3))
         self.tpol.setValidator(QtGui.QDoubleValidator(0.0, 1000000.0, 3))

@@ -189,3 +189,15 @@ class Ui_weldingFrame(object):
 
                             QPushButton:pressed { background-color: rgb(191, 241, 255); }
                         """)
+        self.frame1img.setStyleSheet("""
+                                                    QPushButton:hover { background-color: white }
+                                                    QPushButton:!hover { background-color: white }
+
+                                                    QPushButton:pressed { background-color: white; }
+                                                """)
+        self.frame2img.setStyleSheet("""
+                                                    QPushButton:hover { background-color: white }
+                                                    QPushButton:!hover { background-color: white }
+
+                                                    QPushButton:pressed { background-color: white; }
+                                                """)

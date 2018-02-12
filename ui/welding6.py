@@ -191,4 +191,10 @@ class Ui_weldingFas3(object):
 
                             QPushButton:pressed { background-color: rgb(191, 241, 255); }
                         """)
+        self.fas3img.setStyleSheet("""
+                                                    QPushButton:hover { background-color: white }
+                                                    QPushButton:!hover { background-color: white }
+
+                                                    QPushButton:pressed { background-color: white; }
+                                                """)
 
