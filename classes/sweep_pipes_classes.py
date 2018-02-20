@@ -118,7 +118,6 @@ class SweepPipes:
         self.D = float(diam)
         self.t = float(t)
         self.beta = float(beta) * 0.0174533
-        self.h = float(h) / 2
 
         # Разбивка на количество промежутков в зависимости от диаметра трубы
 

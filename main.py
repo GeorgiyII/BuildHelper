@@ -143,16 +143,16 @@ class BoltsNumber(QtWidgets.QMainWindow):
             self.ui.result.setText('Error')
         else:
             if self.ui.kH.isChecked():
-                self.bolts_number = bolts_number_classes.BoltsNumber(((float(self.ui.force.text())*1000) / 9.81),
+                self.bolts_number = bolts_number_classes.BoltsNumber(((float(self.ui.force.text().replace(',', '.'))*1000) / 9.81),
                                                                      self.rbs, self.rbp, self.ab, self.db,
-                                                                     self.ui.tmin.text(), self.ui.number.currentText())
-                self.ui.nbt.setText(str(self.bolts_number.formula()[0]) + ',' + ''
+                                                                     self.ui.tmin.text().replace(',', '.'), self.ui.number.currentText())
+                self.ui.nbt.setText(str(self.bolts_number.formula()[0]) + '' + ',' + ''
                                     + str(self.bolts_number.formula()[1]))
                 self.ui.result.setText(str(self.bolts_number.number()))
 
             elif self.ui.kgs.isChecked():
-                self.bolts_number = bolts_number_classes.BoltsNumber(float(self.ui.force.text()), self.rbs,
-                                                                     self.rbp, self.ab, self.db, self.ui.tmin.text(),
+                self.bolts_number = bolts_number_classes.BoltsNumber(float(self.ui.force.text().replace(',', '.')), self.rbs,
+                                                                     self.rbp, self.ab, self.db, self.ui.tmin.text().replace(',', '.'),
                                                                      self.ui.number.currentText())
                 self.ui.nbt.setText(str(self.bolts_number.formula()[0]) + ',' + ''
                                     + str(self.bolts_number.formula()[1]))
@@ -175,8 +175,8 @@ class BoltsNumber(QtWidgets.QMainWindow):
         else:
             if self.ui.kH.isChecked():
 
-                self.strength = bolts_number_classes.BoltStrength(((float(self.ui.force.text())*1000) / 9.81),
-                                                                  self.ui.distance_l.text(), self.ui.distance_a.text(),
+                self.strength = bolts_number_classes.BoltStrength(((float(self.ui.force.text().replace(',', '.'))*1000) / 9.81),
+                                                                  self.ui.distance_l.text().replace(',', '.'), self.ui.distance_a.text().replace(',', '.'),
                                                                   self.number)
 
                 self.ui.nb.setText(str(self.strength.strength()))
@@ -184,8 +184,8 @@ class BoltsNumber(QtWidgets.QMainWindow):
 
             elif self.ui.kgs.isChecked():
 
-                self.strength = bolts_number_classes.BoltStrength(float(self.ui.force.text()),
-                                                                  self.ui.distance_l.text(), self.ui.distance_a.text(),
+                self.strength = bolts_number_classes.BoltStrength(float(self.ui.force.text().replace(',', '.')),
+                                                                  self.ui.distance_l.text().replace(',', '.'), self.ui.distance_a.text().replace(',', '.'),
                                                                   self.number)
 
                 self.ui.nb.setText(str(self.strength.strength()))
@@ -231,14 +231,14 @@ class WeldingFas1(QtWidgets.QMainWindow):
 
         else:
             if self.ui.kn.isChecked():
-                Tw = welding_classes.WeldingFas((float(self.ui.rop.text()) * 1000 / 9.81), self.ui.force_l.text(),
-                                                self.ui.weld_l.text(), self.ui.weld_k.text(), self.twofas)
+                Tw = welding_classes.WeldingFas((float(self.ui.rop.text().replace(',', '.')) * 1000 / 9.81), self.ui.force_l.text().replace(',', '.'),
+                                                self.ui.weld_l.text().replace(',', '.'), self.ui.weld_k.text().replace(',', '.'), self.twofas)
                 self.ui.result.setText(str(Tw.welding_fas1()))
                 self.ui.ry_resist.setText(str(self.ryw))
 
             elif self.ui.kgs.isChecked():
-                Tw = welding_classes.WeldingFas(self.ui.rop.text(), self.ui.force_l.text(), self.ui.weld_l.text(),
-                                                self.ui.weld_k.text(), self.twofas)
+                Tw = welding_classes.WeldingFas(self.ui.rop.text().replace(',', '.'), self.ui.force_l.text().replace(',', '.'), self.ui.weld_l.text().replace(',', '.'),
+                                                self.ui.weld_k.text().replace(',', '.'), self.twofas)
                 self.ui.result.setText(str(Tw.welding_fas1()))
                 self.ui.ry_resist.setText(str(self.ryw))
 
@@ -281,14 +281,14 @@ class WeldingFas2(QtWidgets.QMainWindow):
             self.ui.result.setText('Error')
         else:
             if self.ui.kn.isChecked():
-                Tw = welding_classes.WeldingFas((float(self.ui.rop.text()) * 1000 / 9.81), self.ui.force_l.text(),
-                                                self.ui.weld_l.text(), self.ui.weld_k.text(), self.twofas)
+                Tw = welding_classes.WeldingFas((float(self.ui.rop.text().replace(',', '.')) * 1000 / 9.81), self.ui.force_l.text().replace(',', '.'),
+                                                self.ui.weld_l.text().replace(',', '.'), self.ui.weld_k.text().replace(',', '.'), self.twofas)
                 self.ui.result.setText(str(Tw.welding_fas1()))
                 self.ui.ry_resist.setText(str(self.ryw))
 
             elif self.ui.kgs.isChecked():
-                Tw = welding_classes.WeldingFas(self.ui.rop.text(), self.ui.force_l.text(), self.ui.weld_l.text(),
-                                                self.ui.weld_k.text(), self.twofas)
+                Tw = welding_classes.WeldingFas(self.ui.rop.text().replace(',', '.'), self.ui.force_l.text().replace(',', '.'), self.ui.weld_l.text().replace(',', '.'),
+                                                self.ui.weld_k.text().replace(',', '.'), self.twofas)
                 self.ui.result.setText(str(Tw.welding_fas1()))
                 self.ui.ry_resist.setText(str(self.ryw))
 
@@ -331,15 +331,15 @@ class WeldingFas3(QtWidgets.QMainWindow):
             self.ui.result.setText('Error')
         else:
             if self.ui.kn.isChecked():
-                Tw = welding_classes.WeldingFas((float(self.ui.rop.text()) * 1000 / 9.81), self.ui.force_l.text(),
-                                                self.ui.weld_l.text(), self.ui.weld_k.text(), self.twofas,
-                                                (float(self.ui.nop.text()) * 1000 / 9.81))
+                Tw = welding_classes.WeldingFas((float(self.ui.rop.text().replace(',', '.')) * 1000 / 9.81), self.ui.force_l.text().replace(',', '.'),
+                                                self.ui.weld_l.text().replace(',', '.'), self.ui.weld_k.text().replace(',', '.'), self.twofas,
+                                                (float(self.ui.nop.text().replace(',', '.')) * 1000 / 9.81))
                 self.ui.result.setText(str(Tw.welding_fas1()))
                 self.ui.ry_resist.setText(str(self.ryw))
 
             elif self.ui.kgs.isChecked():
-                Tw = welding_classes.WeldingFas(self.ui.rop.text(), self.ui.force_l.text(), self.ui.weld_l.text(),
-                                                self.ui.weld_k.text(), self.twofas, self.ui.nop.text())
+                Tw = welding_classes.WeldingFas(self.ui.rop.text().replace(',', '.'), self.ui.force_l.text().replace(',', '.'), self.ui.weld_l.text().replace(',', '.'),
+                                                self.ui.weld_k.text().replace(',', '.'), self.twofas, self.ui.nop.text().replace(',', '.'))
                 self.ui.result.setText(str(Tw.welding_fas1()))
                 self.ui.ry_resist.setText(str(self.ryw))
 
@@ -366,12 +366,12 @@ class WeldingTable1(QtWidgets.QMainWindow):
 
         else:
             if self.ui.kn.isChecked():
-                table = welding_classes.WeldingTable((float(self.ui.rop.text()) * 1000 / 9.81),
-                                                     self.ui.weld_k.text(), 1)
+                table = welding_classes.WeldingTable((float(self.ui.rop.text().replace(',', '.')) * 1000 / 9.81),
+                                                     self.ui.weld_k.text().replace(',', '.'), 1)
                 self.ui.result.setText(str(table.welding_l2()))
 
             elif self.ui.kgs.isChecked():
-                table = welding_classes.WeldingTable(float(self.ui.rop.text()), self.ui.weld_k.text(), 1)
+                table = welding_classes.WeldingTable(float(self.ui.rop.text().replace(',', '.')), self.ui.weld_k.text().replace(',', '.'), 1)
                 self.ui.result.setText(str(table.welding_l2()))
 
     def welding_h(self):
@@ -383,12 +383,12 @@ class WeldingTable1(QtWidgets.QMainWindow):
 
         else:
             if self.ui.kn.isChecked():
-                table = welding_classes.WeldingTable((float(self.ui.rop.text()) * 1000 / 9.81),
-                                                     1, self.ui.length.text())
+                table = welding_classes.WeldingTable((float(self.ui.rop.text().replace(',', '.')) * 1000 / 9.81),
+                                                     1, self.ui.length.text().replace(',', '.'))
                 self.ui.result2.setText(str(table.welding_h1()))
 
             elif self.ui.kgs.isChecked():
-                table = welding_classes.WeldingTable(float(self.ui.rop.text()), 1, self.ui.length.text())
+                table = welding_classes.WeldingTable(float(self.ui.rop.text().replace(',', '.')), 1, self.ui.length.text().replace(',', '.'))
                 self.ui.result2.setText(str(table.welding_h1()))
 
 
@@ -414,12 +414,12 @@ class WeldingTable2(QtWidgets.QMainWindow):
 
         else:
             if self.ui.kn.isChecked():
-                table = welding_classes.WeldingTable((float(self.ui.rop.text()) * 1000 / 9.81),
-                                                     self.ui.weld_k.text(), 1)
+                table = welding_classes.WeldingTable((float(self.ui.rop.text().replace(',', '.')) * 1000 / 9.81),
+                                                     self.ui.weld_k.text().replace(',', '.'), 1)
                 self.ui.result.setText(str(table.welding_l2()))
 
             elif self.ui.kgs.isChecked():
-                table = welding_classes.WeldingTable(float(self.ui.rop.text()), self.ui.weld_k.text(), 1)
+                table = welding_classes.WeldingTable(float(self.ui.rop.text().replace(',', '.')), self.ui.weld_k.text().replace(',', '.'), 1)
                 self.ui.result.setText(str(table.welding_l2()))
 
     def welding_h(self):
@@ -431,12 +431,12 @@ class WeldingTable2(QtWidgets.QMainWindow):
 
         else:
             if self.ui.kn.isChecked():
-                table = welding_classes.WeldingTable((float(self.ui.rop.text()) * 1000 / 9.81),
-                                                     1, self.ui.length.text())
+                table = welding_classes.WeldingTable((float(self.ui.rop.text().replace(',', '.')) * 1000 / 9.81),
+                                                     1, self.ui.length.text().replace(',', '.'))
                 self.ui.result2.setText(str(table.welding_h1()))
 
             elif self.ui.kgs.isChecked():
-                table = welding_classes.WeldingTable(float(self.ui.rop.text()), 1, self.ui.length.text())
+                table = welding_classes.WeldingTable(float(self.ui.rop.text().replace(',', '.')), 1, self.ui.length.text().replace(',', '.'))
                 self.ui.result2.setText(str(table.welding_h1()))
 
 
@@ -462,17 +462,17 @@ class WeldingFrame(QtWidgets.QMainWindow):
             self.ui.result.setText('Error')
         else:
             if self.ui.kn.isChecked():
-                frame = welding_classes.WeldingFrame((float(self.ui.mom.text()) * 1000 / 9.81),
-                                                     (float(self.ui.rop.text()) * 1000 / 9.81),
-                                                     self.ui.height.text(), self.ui.force_l_2.text(),
-                                                     self.ui.weld_k.text(), self.ryw)
+                frame = welding_classes.WeldingFrame((float(self.ui.mom.text().replace(',', '.')) * 1000 / 9.81),
+                                                     (float(self.ui.rop.text().replace(',', '.')) * 1000 / 9.81),
+                                                     self.ui.height.text().replace(',', '.'), self.ui.force_l_2.text().replace(',', '.'),
+                                                     self.ui.weld_k.text().replace(',', '.'), self.ryw)
                 self.ui.result_2.setText(str(frame.welding_b()))
                 self.ui.result.setText(str(frame.welding_l()))
 
             elif self.ui.kgs.isChecked():
-                frame = welding_classes.WeldingFrame(self.ui.mom.text(), float(self.ui.rop.text()),
-                                                     self.ui.height.text(), self.ui.force_l_2.text(),
-                                                     self.ui.weld_k.text(), self.ryw)
+                frame = welding_classes.WeldingFrame(self.ui.mom.text().replace(',', '.'), float(self.ui.rop.text().replace(',', '.')),
+                                                     self.ui.height.text().replace(',', '.'), self.ui.force_l_2.text().replace(',', '.'),
+                                                     self.ui.weld_k.text().replace(',', '.'), self.ryw)
                 self.ui.result_2.setText(str(frame.welding_b()))
                 self.ui.result.setText(str(frame.welding_l()))
 
@@ -496,8 +496,8 @@ class Section(QtWidgets.QMainWindow):
             self.ui.result.setText('Error')
             self.ui.result_2.setText('Error')
         else:
-            ix_result = welding_bead_classes.WeldingBead(self.ui.hst.text(), self.ui.tst.text(), self.ui.bpol.text(),
-                                                         self.ui.tpol.text())
+            ix_result = welding_bead_classes.WeldingBead(self.ui.hst.text().replace(',', '.'), self.ui.tst.text().replace(',', '.'), self.ui.bpol.text().replace(',', '.'),
+                                                         self.ui.tpol.text().replace(',', '.'))
 
             self.ui.result.setText(str(ix_result.ix_calculate()))
             self.ui.result_2.setText(str(ix_result.m_calculate()))
@@ -529,8 +529,8 @@ class Scan(QtWidgets.QMainWindow):
             self.ui.listWidget.addItem('Нет данных')
 
         else:
-            tab_res = sweep_pipes_classes.SweepCylinder(self.ui.d_cylinder.text(), self.ui.t_cylinder.text(),
-                                                        self.ui.h_cylinder.text())
+            tab_res = sweep_pipes_classes.SweepCylinder(self.ui.d_cylinder.text().replace(',', '.'), self.ui.t_cylinder.text().replace(',', '.'),
+                                                        self.ui.h_cylinder.text().replace(',', '.'))
 
             # Заполнение полей виджета
 
@@ -549,14 +549,17 @@ class Scan(QtWidgets.QMainWindow):
             self.ui.listWidget.addItem('Нет данных')
 
         else:
+            if float(self.ui.d_pipe90.text().replace(',', '.')) <= float(self.ui.diam_pipe90.text().replace(',', '.')):
 
-            tab_res = sweep_pipes_classes.SweepPipes(self.ui.d_pipe90.text(), self.ui.t_pipe90.text(),
-                                                     self.ui.diam_pipe90.text(), 0)
+                tab_res = sweep_pipes_classes.SweepPipes(self.ui.d_pipe90.text().replace(',', '.'), self.ui.t_pipe90.text().replace(',', '.'),
+                                                         self.ui.diam_pipe90.text().replace(',', '.'), 0)
 
             # Заполнение полей виджета
 
-            for i in tab_res.pipe_90():
-                self.ui.listWidget.addItem('{} - {}'.format(i[0], i[1]))
+                for i in tab_res.pipe_90():
+                    self.ui.listWidget.addItem('{} - {}'.format(i[0], i[1]))
+            else:
+                self.ui.listWidget.addItem('Error')
 
     def calculation_pipe(self):
 
@@ -570,13 +573,17 @@ class Scan(QtWidgets.QMainWindow):
             self.ui.listWidget.addItem('Нет данных')
 
         else:
-            tab_res = sweep_pipes_classes.SweepPipes(self.ui.d_pipe.text(), self.ui.t_pipe.text(),
-                                                     self.ui.diam_pipe.text(), self.ui.beta_pipe.text())
+            if float(self.ui.d_pipe.text().replace(',', '.')) <= float(self.ui.diam_pipe.text().replace(',', '.')):
+                tab_res = sweep_pipes_classes.SweepPipes(self.ui.d_pipe.text().replace(',', '.'), self.ui.t_pipe.text().replace(',', '.'),
+                                                         self.ui.diam_pipe.text().replace(',', '.'), self.ui.beta_pipe.text().replace(',', '.'))
 
         # Заполнение полей виджета
 
-            for i in tab_res.pipe_beta():
-                self.ui.listWidget.addItem('{} - {}'.format(i[0], i[1]))
+                for i in tab_res.pipe_beta():
+                    self.ui.listWidget.addItem('{} - {}'.format(i[0], i[1]))
+
+            else:
+                self.ui.listWidget.addItem('Error')
 
 
 if __name__ == "__main__":
