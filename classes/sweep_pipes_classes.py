@@ -103,7 +103,6 @@ class SweepCylinder:
 
         for index, value in enumerate(list_cylinder):
             a = (index, value)
-            print(self.d)
             list_result.append(a)
 
         return list_result
